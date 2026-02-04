@@ -1,4 +1,5 @@
 import { ProgramItem, TestimonialItem, FAQItem } from './types';
+import API_BASE_URL from './components/constants';
 
 // const API_BASE_URL = 'http://localhost:8080/api';
 
@@ -141,8 +142,9 @@ export const fetchFAQs = async (lang: string): Promise<FAQItem[]> => {
     ];
 };
 
-// const API_BASE_URL = 'http://localhost:8080/api';
-const API_BASE_URL = 'http://localhost:8080/api';
+// const API_BASE_URL =registaration/api';
+// Use backticks ` `
+const response = await fetch(`${API_BASE_URL}/api/applications`, {
 
 export const submitRegistration = async (data: any): Promise<any> => {
     const response = await fetch(`${API_BASE_URL}/registrations`, {
